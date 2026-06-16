@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>摸涨隐私政策</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f8fb;
+        --card: #ffffff;
+        --text: #172033;
+        --muted: #667085;
+        --line: #e4e7ec;
+        --brand: #0a84ff;
+        --brand-soft: #e8f2ff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background:
+          radial-gradient(circle at top left, rgba(10, 132, 255, 0.12), transparent 32rem),
+          var(--bg);
+        color: var(--text);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei",
+          sans-serif;
+        line-height: 1.7;
+      }
+
+      main {
+        width: min(880px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 72px;
+      }
+
+      header,
+      section {
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 24px 80px rgba(23, 32, 51, 0.08);
+      }
+
+      header {
+        padding: 34px;
+      }
+
+      section {
+        margin-top: 18px;
+        padding: 26px 30px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        padding: 6px 12px;
+        background: var(--brand-soft);
+        color: var(--brand);
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      h1 {
+        margin: 16px 0 10px;
+        font-size: clamp(32px, 5vw, 46px);
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 20px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      ul {
+        margin: 10px 0 0;
+        padding-left: 22px;
+      }
+
+      li + li {
+        margin-top: 8px;
+      }
+
+      .lead {
+        max-width: 680px;
+        color: var(--muted);
+        font-size: 17px;
+      }
+
+      .meta {
+        margin-top: 20px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      strong {
+        color: var(--text);
+      }
+
+      a {
+        color: var(--brand);
+      }
+
+      code {
+        border-radius: 8px;
+        padding: 2px 6px;
+        background: #eef2f7;
+        color: #344054;
+        font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+        font-size: 0.92em;
+      }
+
+      footer {
+        margin-top: 22px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <span class="badge">摸涨 Privacy Policy</span>
+        <h1>摸涨隐私政策</h1>
+        <p class="lead">
+          摸涨是一款用于轻量查看 A 股、基金、自选列表、持仓估算和价格提醒的浏览器扩展。
+          我们尊重用户隐私，不要求登录，不出售用户数据，也不会把用户的个人配置上传到开发者服务器。
+        </p>
+        <p class="meta">生效日期：2026 年 6 月 16 日</p>
+      </header>
+
+      <section>
+        <h2>1. 我们是否收集个人信息</h2>
+        <p>
+          摸涨<strong>不会收集、出售、出租或主动上传</strong>用户的真实身份信息、联系方式、浏览历史、金融账户信息或交易信息。
+        </p>
+        <p>
+          用户在插件中填写的自选标的、持仓数量、平均成本、备注、显示设置、网页浮层颜色、价格提醒规则等数据，
+          默认仅保存在用户当前浏览器的本地存储中。
+        </p>
+      </section>
+
+      <section>
+        <h2>2. 本地保存的数据</h2>
+        <p>为了提供基础功能，摸涨会在浏览器本地保存以下数据：</p>
+        <ul>
+          <li>自选股票和基金代码、名称、类型。</li>
+          <li>用户手动填写的持仓数量、平均成本和备注。</li>
+          <li>显示强度、主题、筛选状态、网页浮层颜色等界面设置。</li>
+          <li>价格提醒规则和提醒触发状态。</li>
+          <li>最近一次行情快照缓存，用于网络失败时展示旧数据并标记过期状态。</li>
+        </ul>
+        <p>
+          这些数据用于插件功能本身，不会被上传到开发者服务器。用户可以通过浏览器扩展管理页卸载插件并清除本地数据。
+        </p>
+      </section>
+
+      <section>
+        <h2>3. 第三方行情接口</h2>
+        <p>
+          为了获取公开行情数据，摸涨会向第三方行情接口发送用户自选标的的证券代码或搜索关键词。
+          这些请求用于返回价格、涨跌幅、指数、分时、K 线和代码搜索结果。
+        </p>
+        <p>当前使用的接口包括：</p>
+        <ul>
+          <li><code>https://push2.eastmoney.com/*</code>：获取东方财富行情数据。</li>
+          <li><code>https://push2his.eastmoney.com/*</code>：获取历史 K 线和分时数据。</li>
+          <li><code>https://search-codetable.eastmoney.com/*</code>：搜索股票和基金代码。</li>
+          <li><code>https://qt.gtimg.cn/*</code>：作为行情数据备用来源。</li>
+        </ul>
+        <p>
+          第三方行情接口可能接收到被查询的证券代码或搜索关键词，但摸涨不会向这些接口发送用户填写的持仓数量、
+          平均成本、备注或提醒规则。
+        </p>
+      </section>
+
+      <section>
+        <h2>4. 权限用途</h2>
+        <ul>
+          <li><strong>storage</strong>：用于在本地保存自选列表、显示设置、提醒规则和行情缓存。</li>
+          <li><strong>alarms</strong>：用于定时检查用户设置的价格提醒，并在达到条件时更新扩展角标。</li>
+          <li><strong>主机权限</strong>：用于请求公开行情数据、历史行情数据和代码搜索结果。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. 远程代码</h2>
+        <p>
+          摸涨不会从远程服务器下载并执行 JavaScript、WebAssembly 或其他可执行代码。插件代码随安装包一起发布。
+          请求第三方行情接口仅用于获取数据，不用于加载远程代码。
+        </p>
+      </section>
+
+      <section>
+        <h2>6. 数据导入与导出</h2>
+        <p>
+          摸涨支持用户手动导出和导入 JSON 配置文件。导出的文件会保存在用户本地设备中，是否分享或迁移该文件由用户自行决定。
+          请妥善保管导出的配置文件，因为其中可能包含用户填写的持仓数量、成本和备注。
+        </p>
+      </section>
+
+      <section>
+        <h2>7. 投资风险说明</h2>
+        <p>
+          摸涨仅提供行情查看、持仓估算和提醒辅助功能，不提供投资建议，不连接券商账户，不执行交易操作。
+          行情数据可能存在延迟、错误或中断，所有信息仅供个人参考。
+        </p>
+      </section>
+
+      <section>
+        <h2>8. 政策更新</h2>
+        <p>
+          如果未来功能发生变化，例如新增云同步、账户系统或新的数据处理方式，本隐私政策会同步更新，并在必要时重新说明数据用途。
+        </p>
+      </section>
+
+      <section>
+        <h2>9. 联系方式</h2>
+        <p>
+          如果你对本隐私政策或摸涨的数据处理方式有疑问，可以通过项目仓库 Issue 联系开发者：
+          <a href="https://github.com/NoahNiu/yinjihangqing/issues">https://github.com/NoahNiu/yinjihangqing/issues</a>
+        </p>
+      </section>
+
+      <footer>© 2026 摸涨。保留所有权利。</footer>
+    </main>
+  </body>
+</html>
